@@ -7,9 +7,17 @@ import { Success } from "./success"
 
 const EMOJIS = ['☹️', '🙂', '😍']
 
-export function Review({ storeId }: { storeId: string }) {
+interface store_data  {
+  name : string,
+  url : string
+}
+
+interface displayprops {
+  item : store_data
+}
+
+export function Review( { item } : displayprops) {
   const [heart, setHeart] = useState(0)
-  const [review, setReview] = useState("")
   const [trigger,setTrigger] = useState(false)
   return (
     <Card className="mx-auto w-full max-w-xs">
@@ -18,7 +26,7 @@ export function Review({ storeId }: { storeId: string }) {
         <>
           <div className="flex flex-col items-center gap-3">
             <h3 className="text-sm font-bold">Give us your review</h3>
-            <h2 className="text-xs text-center">How was your experience at [Shop Name] today?</h2>
+            <h2 className="text-xs text-center">How was your experience at {item.name} today?</h2>
             <RatingIcon heart={heart} setHeart={setHeart} />
             {heart > 0 && (
               <p className="text-muted-foreground text-xs">
@@ -40,7 +48,7 @@ export function Review({ storeId }: { storeId: string }) {
               if(heart<=3){
                 setTrigger(true)
               }
-              else return window.location.href=`https://search.google.com/local/writereview?placeid=${storeId}`
+              else return window.location.href=`https://search.google.com/local/writereview?placeid=${item.url}`
             }}
           >
             Submit Review
