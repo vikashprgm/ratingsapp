@@ -48,7 +48,7 @@ export function Review( { item } : displayprops) {
               if(heart<=3){
                 setTrigger(true)
               }
-              else return window.location.href=`https://search.google.com/local/writereview?placeid=${item.url}`
+              else return window.location.href=item.url
             }}
           >
             Submit Review
