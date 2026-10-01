@@ -1,8 +1,7 @@
 "use client"
 
-import { GenerateCard } from "@/components/generateCard"
 import { useState } from "react"
-import { createStoreAction, updateStoreAction } from "../action" // Import your server action
+import {  updateStoreAction } from "../action" // Import your server action
 import { UpdateCard } from "@/components/updateCard"
 
 export default function UpdateStore() {
@@ -11,13 +10,15 @@ export default function UpdateStore() {
     const [passkey, setPasskey] = useState<string>("")
     const [id, setId] = useState<string>("")
     const [success, setSuccess] = useState(false)
+    const [isAI,setIsAI] = useState(false)
+    const [category,setCategory] = useState("")
     const [errorMsg, setErrorMsg] = useState<string>("")
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
       e.preventDefault()
       setErrorMsg("")
 
-      const response = await updateStoreAction(id, name, url, passkey)
+      const response = await updateStoreAction(id, name, url, passkey, category)
 
       if (response.error) {
         setErrorMsg(response.error)
@@ -30,7 +31,7 @@ export default function UpdateStore() {
       <div>
         { !success ?
           <>
-            <UpdateCard setId={setId} setLink={setUrl} setName={setName} setPasskey={setPasskey} onSubmit={handleSubmit}/>
+            <UpdateCard setId={setId} setLink={setUrl} setName={setName} setPasskey={setPasskey} onSubmit={handleSubmit} isAI={isAI} setIsAI={setIsAI} setCategory={setCategory}/>
             {errorMsg && <p style={{ color: 'red', marginTop: '10px' }}>{errorMsg}</p>}
           </>
           :

@@ -11,8 +11,33 @@ import {
 } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
+import { Switch } from "./ui/switch"
+import {
+  Combobox,
+  ComboboxContent,
+  ComboboxEmpty,
+  ComboboxInput,
+  ComboboxItem,
+  ComboboxList,
+} from "@/components/ui/combobox"
 
-export function UpdateCard({onSubmit, setName, setLink, setPasskey, setId} : {onSubmit:any, setName:any, setLink:any, setPasskey:any, setId:any}) {
+const categories = [
+  "Restaurants",
+  "Cafes",
+  "Bakery",
+  "Sweet Shops",
+  "Street Food",
+  "Cloth Stores",
+  "Grocery",
+  "Electronics",
+  "Handicrafts",
+  "Bookstores",
+  "Salons & Spas",
+  "Gyms",
+  "Other"
+]
+
+export function UpdateCard({onSubmit, setName, setLink, setPasskey, setId, isAI, setIsAI, setCategory} : {onSubmit:any, setName:any, setLink:any, setPasskey:any, setId:any, isAI:any, setIsAI:any, setCategory: any}) {
   return (
     <div className="mx-auto grid w-full max-w-sm gap-4">
       <Card>
@@ -57,7 +82,7 @@ export function UpdateCard({onSubmit, setName, setLink, setPasskey, setId} : {on
                   onChange={(e) => setLink(e.target.value)}
                 />
               </div>
-              <div className="grid gap-2 pb-4">
+              <div className="grid gap-2">
                 <Label htmlFor="passkey">Admin Passkey</Label>
                 <Input
                   id="passkey"
@@ -66,6 +91,30 @@ export function UpdateCard({onSubmit, setName, setLink, setPasskey, setId} : {on
                   onChange={(e) => setPasskey(e.target.value)}
                 />
               </div>
+              <div className="flex items-center space-x-2">
+                <Label htmlFor="isAI">Enable AI Reviews</Label>
+                <Switch id="isAI" onCheckedChange={()=>setIsAI(!isAI)}/>
+              </div>
+              {
+                isAI? 
+                <div className="pb-6">
+                   <Combobox items={categories} onValueChange={setCategory}>
+                    <ComboboxInput placeholder="Select a category" />
+                    <ComboboxContent>
+                      <ComboboxEmpty>No items found.</ComboboxEmpty>
+                      <ComboboxList>
+                        {(item) => (
+                          <ComboboxItem key={item} value={item}>
+                            {item}
+                          </ComboboxItem>
+                        )}
+                      </ComboboxList>
+                    </ComboboxContent>
+                  </Combobox>
+                </div> 
+                : 
+                <div className="pb-6 text-slate-500">AI reviews are turned off</div>
+              }
             </div>
           </CardContent>
           <CardFooter className="flex-col gap-2">

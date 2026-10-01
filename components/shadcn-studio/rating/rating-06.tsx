@@ -8,9 +8,10 @@ interface RatingIconProps {
   heart: number
   setHeart: (val: number) => void
   max?: number
+  setTrigger: any
 }
 
-export function RatingIcon({ heart, setHeart, max = 5 }: RatingIconProps) {
+export function RatingIcon({ heart, setHeart, max = 5, setTrigger}: RatingIconProps) {
   const [hovered, setHovered] = useState<number | null>(null)
 
   return (
@@ -26,7 +27,10 @@ export function RatingIcon({ heart, setHeart, max = 5 }: RatingIconProps) {
             role="radio"
             aria-checked={heart === starValue}
             aria-label={`${starValue} star${starValue > 1 ? 's' : ''}`}
-            onClick={() => setHeart(heart === starValue ? 0 : starValue)}
+            onClick={() => {
+              setHeart(heart === starValue ? 0 : starValue)
+              setTrigger(true)
+            }}
             onMouseEnter={() => setHovered(starValue)}
             onMouseLeave={() => setHovered(null)}
             className="rounded-sm p-1 transition-transform active:scale-90 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"

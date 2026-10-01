@@ -26,7 +26,7 @@ export async function createStoreAction(name: string, url: string, passkey: stri
   return { success: true, id: data.id }
 }
 
-export async function updateStoreAction(id:string, newName:string, newUrl:string, passkey:string){
+export async function updateStoreAction(id:string, newName:string, newUrl:string, passkey:string, category:string){
   if (passkey !== process.env.SECRET_PASSKEY) {
     return { error: "Invalid passkey. Access denied." }
   }
@@ -37,7 +37,7 @@ export async function updateStoreAction(id:string, newName:string, newUrl:string
   )
   const {error} = await supabase
   .from('store')
-  .update({name:newName, url:newUrl})
+  .update({name:newName, url:newUrl, cat: category})
   .eq('id',id)
   if(error){
     return {error: error.message}
