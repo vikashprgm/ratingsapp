@@ -1,3 +1,8 @@
+export interface Tag {
+  emoji: string
+  label: string
+}
+
 export const categoryReviews: Record<string, string[]> = {
   Restaurants: [
     "Amazing ambiance and the food tasted exceptionally fresh!",
@@ -92,8 +97,120 @@ export const categoryReviews: Record<string, string[]> = {
   ]
 };
 
+// Tappable "What was unforgettable?" chips, one set per category (6 each)
+export const categoryTags: Record<string, Tag[]> = {
+  Restaurants: [
+    { emoji: "🍽️", label: "Delicious Food" },
+    { emoji: "🌟", label: "Great Ambiance" },
+    { emoji: "⚡", label: "Quick Service" },
+    { emoji: "👨‍🍳", label: "Chef's Special" },
+    { emoji: "👨‍👩‍👧", label: "Family Friendly" },
+    { emoji: "💸", label: "Value for Money" },
+  ],
+  Cafes: [
+    { emoji: "☕", label: "Amazing Coffee" },
+    { emoji: "🥐", label: "Fresh Pastries" },
+    { emoji: "🎶", label: "Vibe & Playlist" },
+    { emoji: "💻", label: "Work-Friendly" },
+    { emoji: "🛋️", label: "Cozy Corner" },
+    { emoji: "😊", label: "Friendly Staff" },
+  ],
+  Bakery: [
+    { emoji: "🥐", label: "Fresh Baked" },
+    { emoji: "🎂", label: "Custom Cakes" },
+    { emoji: "🍫", label: "Chocolate Pastry" },
+    { emoji: "🥖", label: "Garlic Bread" },
+    { emoji: "✨", label: "Quality Ingredients" },
+    { emoji: "😋", label: "Heavenly Aroma" },
+  ],
+  "Sweet Shops": [
+    { emoji: "🍬", label: "Authentic Taste" },
+    { emoji: "🔥", label: "Hot Jalebis" },
+    { emoji: "🧼", label: "Hygienic Setup" },
+    { emoji: "🎁", label: "Festive Gifting" },
+    { emoji: "🍯", label: "Wide Mithai Variety" },
+    { emoji: "✅", label: "Consistent Quality" },
+  ],
+  "Street Food": [
+    { emoji: "🌶️", label: "Bursting Flavor" },
+    { emoji: "🧼", label: "Hygienic Prep" },
+    { emoji: "⚡", label: "Quick Service" },
+    { emoji: "🥘", label: "Generous Portions" },
+    { emoji: "💰", label: "Pocket-Friendly" },
+    { emoji: "📍", label: "Local Favorite" },
+  ],
+  "Cloth Stores": [
+    { emoji: "🧵", label: "Fabric Quality" },
+    { emoji: "👗", label: "Trendy Collection" },
+    { emoji: "📏", label: "True to Size" },
+    { emoji: "🪔", label: "Festive Wear" },
+    { emoji: "💁", label: "Helpful Styling" },
+    { emoji: "💸", label: "Fair Pricing" },
+  ],
+  Grocery: [
+    { emoji: "🥬", label: "Fresh Produce" },
+    { emoji: "🛒", label: "Everything in One Place" },
+    { emoji: "🚚", label: "Prompt Delivery" },
+    { emoji: "🏷️", label: "Great Discounts" },
+    { emoji: "🧺", label: "Clean Layout" },
+    { emoji: "📦", label: "Secure Packing" },
+  ],
+  Electronics: [
+    { emoji: "✅", label: "Genuine Products" },
+    { emoji: "🧠", label: "Knowledgeable Staff" },
+    { emoji: "💸", label: "Competitive Pricing" },
+    { emoji: "🛠️", label: "Setup Help" },
+    { emoji: "🤝", label: "Great Support" },
+    { emoji: "🧾", label: "Quick Billing" },
+  ],
+  Handicrafts: [
+    { emoji: "🎨", label: "Exquisite Art" },
+    { emoji: "🪡", label: "Fine Craftsmanship" },
+    { emoji: "🎁", label: "Perfect for Gifting" },
+    { emoji: "🏺", label: "Unique Pieces" },
+    { emoji: "📦", label: "Secure Packing" },
+    { emoji: "🏡", label: "Home Decor" },
+  ],
+  Bookstores: [
+    { emoji: "📚", label: "Great Collection" },
+    { emoji: "🤫", label: "Peaceful Vibe" },
+    { emoji: "💡", label: "Smart Recommendations" },
+    { emoji: "🪑", label: "Cozy Reading Nook" },
+    { emoji: "📖", label: "Indie Titles" },
+    { emoji: "💸", label: "Fair Prices" },
+  ],
+  "Salons & Spas": [
+    { emoji: "💆", label: "Relaxing Massage" },
+    { emoji: "✂️", label: "Perfect Haircut" },
+    { emoji: "🧼", label: "Spotless & Clean" },
+    { emoji: "🎶", label: "Calming Music" },
+    { emoji: "👏", label: "Professional Team" },
+    { emoji: "💸", label: "Great Value" },
+  ],
+  Gyms: [
+    { emoji: "🏋️", label: "Top Equipment" },
+    { emoji: "💪", label: "Motivating Trainers" },
+    { emoji: "🧼", label: "Clean Locker Rooms" },
+    { emoji: "📋", label: "Custom Workouts" },
+    { emoji: "🔥", label: "Great Energy" },
+    { emoji: "💸", label: "Affordable Plans" },
+  ],
+  Other: [
+    { emoji: "😊", label: "Friendly Staff" },
+    { emoji: "⚡", label: "Quick Service" },
+    { emoji: "🧼", label: "Clean Space" },
+    { emoji: "💸", label: "Value for Money" },
+    { emoji: "✅", label: "Reliable" },
+    { emoji: "🌟", label: "Exceeded Expectations" },
+  ],
+};
+
 export function getReview(cat: string): string {
   const reviews = categoryReviews[cat] || categoryReviews["Other"];
   const randomIndex = Math.floor(Math.random() * reviews.length);
   return reviews[randomIndex];
+}
+
+export function getTags(cat: string): Tag[] {
+  return categoryTags[cat] || categoryTags["Other"];
 }
