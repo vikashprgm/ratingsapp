@@ -34,7 +34,10 @@ export function Review({ item }: displayprops) {
   const [isCopied, setIsCopied] = useState(false)
 
   const highlights = useMemo(() => getTags(item.cat), [item.cat])
-  const isPositive = heart > 3 && !!item.cat
+  // 4-5 stars -> send to Google Maps, regardless of category
+  const isPositive = heart > 3
+  // AI-generated review + chips only when we have a category to generate from
+  const hasReview = isPositive && !!item.cat
 
   // Reset chosen chips if the category changes
   useEffect(() => {
@@ -43,7 +46,7 @@ export function Review({ item }: displayprops) {
 
   // Generate + type out the review when the rating becomes positive
   useEffect(() => {
-    if (!isPositive) {
+    if (!hasReview) {
       setDisplayedReview("")
       setFullReview("")
       setIsTyping(false)
@@ -66,7 +69,7 @@ export function Review({ item }: displayprops) {
     }, 30)
 
     return () => clearInterval(interval)
-  }, [isPositive, heart, item.cat])
+  }, [hasReview, heart, item.cat])
 
   // Final text = generated review + a sentence built from the selected chips
   const finalText = useMemo(() => {
@@ -150,7 +153,7 @@ export function Review({ item }: displayprops) {
           )}
 
           {/* Positive flow: chips + generated review */}
-          {isPositive && (
+          {hasReview && (
             <>
               <div className="space-y-2.5">
                 <div className="flex items-center justify-between">
@@ -239,7 +242,7 @@ export function Review({ item }: displayprops) {
                 )}
               </button>
 
-              {isPositive && (
+              {hasReview && (
                 <p className="flex items-center justify-center gap-1.5 text-[11px] text-[#7a6a66]">
                   <Zap className="h-3.5 w-3.5 text-amber-500" />
                   Takes less than 30 seconds • Copy, then paste on Google Maps
