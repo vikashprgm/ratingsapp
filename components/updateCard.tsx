@@ -19,6 +19,7 @@ const categories = [
   "Bakery",
   "Hotels",
   "Sweet Shops",
+  "Jewelry Shop",
   "Street Food",
   "Cloth Stores",
   "Grocery",
@@ -27,8 +28,7 @@ const categories = [
   "Bookstores",
   "Salons & Spas",
   "Gyms",
-  "Other",
-  "Jewelry Shop"
+  "Other"
 ]
 
 export function UpdateCard({
