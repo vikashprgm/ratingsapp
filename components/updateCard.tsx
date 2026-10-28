@@ -27,7 +27,8 @@ const categories = [
   "Bookstores",
   "Salons & Spas",
   "Gyms",
-  "Other"
+  "Other",
+  "Jewelry Shop"
 ]
 
 export function UpdateCard({
