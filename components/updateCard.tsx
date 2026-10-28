@@ -12,14 +12,6 @@ import {
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Switch } from "./ui/switch"
-import {
-  Combobox,
-  ComboboxContent,
-  ComboboxEmpty,
-  ComboboxInput,
-  ComboboxItem,
-  ComboboxList,
-} from "@/components/ui/combobox"
 
 const categories = [
   "Restaurants",
@@ -36,9 +28,20 @@ const categories = [
   "Gyms",
   "Other"
 ]
-
-export function UpdateCard({onSubmit, setName, setLink, setPasskey, setId, isAI, setIsAI, setCategory} : {onSubmit:any, setName:any, setLink:any, setPasskey:any, setId:any, isAI:any, setIsAI:any, setCategory: any}) {
-  return (
+export function UpdateCard({
+  onSubmit, setName, setLink, setPasskey, setId, isAI, setIsAI, setCategory, category
+}: {
+  onSubmit: any, setName: any, setLink: any, setPasskey: any, setId: any, 
+  isAI: any, setIsAI: any, setCategory: (cats: string[]) => void, category: string[]
+}) {
+    const toggleCategory = (cat: string) => {
+      if (category.includes(cat)) {
+        setCategory(category.filter((c) => c !== cat))
+      } else {
+        setCategory([...category, cat])
+      }
+    }
+    return (
     <div className="mx-auto grid w-full max-w-sm gap-4">
       <Card>
         <CardHeader>
@@ -55,7 +58,7 @@ export function UpdateCard({onSubmit, setName, setLink, setPasskey, setId, isAI,
                 <Label htmlFor="store-name">Store ID</Label>
                 <Input
                   id="store-name"
-                  type="text" // changed from email to text
+                  type="text"
                   placeholder="b174r39da-c2cd-43dd-8262-4a93ae582e67"
                   required
                   onChange={(e) => setId(e.target.value)}
@@ -93,28 +96,33 @@ export function UpdateCard({onSubmit, setName, setLink, setPasskey, setId, isAI,
               </div>
               <div className="flex items-center space-x-2">
                 <Label htmlFor="isAI">Enable AI Reviews</Label>
-                <Switch id="isAI" onCheckedChange={()=>setIsAI(!isAI)}/>
+                <Switch id="isAI" checked={isAI} onCheckedChange={()=>setIsAI(!isAI)}/>
               </div>
-              {
-                isAI? 
-                <div className="pb-6">
-                   <Combobox items={categories} onValueChange={setCategory}>
-                    <ComboboxInput placeholder="Select a category" />
-                    <ComboboxContent>
-                      <ComboboxEmpty>No items found.</ComboboxEmpty>
-                      <ComboboxList>
-                        {(item) => (
-                          <ComboboxItem key={item} value={item}>
-                            {item}
-                          </ComboboxItem>
-                        )}
-                      </ComboboxList>
-                    </ComboboxContent>
-                  </Combobox>
+
+              {isAI ? (
+                <div className="pb-6 space-y-3">
+                   <Label>Select Categories</Label>
+                   <div className="flex flex-wrap gap-2">
+                     {categories.map((cat) => {
+                       const isSelected = category.includes(cat);
+                       return (
+                         <Button
+                           key={cat}
+                           type="button"
+                           variant={isSelected ? "default" : "outline"}
+                           size="sm"
+                           onClick={() => toggleCategory(cat)}
+                           className="rounded-full"
+                         >
+                           {cat}
+                         </Button>
+                       )
+                     })}
+                   </div>
                 </div> 
-                : 
+              ) : (
                 <div className="pb-6 text-slate-500">AI reviews are turned off</div>
-              }
+              )}
             </div>
           </CardContent>
           <CardFooter className="flex-col gap-2">
@@ -123,7 +131,6 @@ export function UpdateCard({onSubmit, setName, setLink, setPasskey, setId, isAI,
             </Button>
           </CardFooter>
         </form>
-
       </Card>
     </div>
   )

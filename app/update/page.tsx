@@ -11,7 +11,7 @@ export default function UpdateStore() {
     const [id, setId] = useState<string>("")
     const [success, setSuccess] = useState(false)
     const [isAI,setIsAI] = useState(false)
-    const [category,setCategory] = useState("")
+    const [category,setCategory] = useState<string[]>([])
     const [errorMsg, setErrorMsg] = useState<string>("")
 
     const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -31,7 +31,17 @@ export default function UpdateStore() {
       <div>
         { !success ?
           <>
-            <UpdateCard setId={setId} setLink={setUrl} setName={setName} setPasskey={setPasskey} onSubmit={handleSubmit} isAI={isAI} setIsAI={setIsAI} setCategory={setCategory}/>
+            <UpdateCard 
+              setId={setId} 
+              setLink={setUrl} 
+              setName={setName} 
+              setPasskey={setPasskey} 
+              onSubmit={handleSubmit} 
+              isAI={isAI} 
+              setIsAI={setIsAI} 
+              setCategory={setCategory}
+              category={category}/>
+              
             {errorMsg && <p style={{ color: 'red', marginTop: '10px' }}>{errorMsg}</p>}
           </>
           :

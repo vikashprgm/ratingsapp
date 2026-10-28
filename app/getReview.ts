@@ -4,6 +4,13 @@ export interface Tag {
 }
 
 export const categoryReviews: Record<string, string[]> = {
+  Hotels: [
+    "Had a wonderful stay! The rooms were spacious and impeccably clean.",
+    "Great location and the complimentary breakfast was a delightful bonus.",
+    "The staff was incredibly accommodating and made check-in a breeze.",
+    "Comfortable beds and excellent room service. Highly recommended.",
+    "Fantastic amenities and the pool area was incredibly relaxing."
+  ],
   Restaurants: [
     "Amazing ambiance and the food tasted exceptionally fresh!",
     "Service was a bit slow during peak hours, but the main course made up for it.",
@@ -22,7 +29,7 @@ export const categoryReviews: Record<string, string[]> = {
     "The garlic bread and freshly baked croissants melt in your mouth!",
     "Ordered a custom birthday cake and it looked and tasted incredible.",
     "Everything smelled so good as soon as I walked through the door.",
-    "Slightly expensive, but the quality of ingredients clearly justifies the price.",
+    "The quality of ingredients clearly justifies the price. Definately recommend visiting",
     "Their chocolate truffle pastry is hands down the best in town."
   ],
   "Sweet Shops": [
@@ -97,8 +104,15 @@ export const categoryReviews: Record<string, string[]> = {
   ]
 };
 
-// Tappable "What was unforgettable?" chips, one set per category (6 each)
 export const categoryTags: Record<string, Tag[]> = {
+  Hotels: [
+    { emoji: "🛏️", label: "Comfy Beds" },
+    { emoji: "🧼", label: "Clean Rooms" },
+    { emoji: "🛎️", label: "Great Service" },
+    { emoji: "🍳", label: "Good Breakfast" },
+    { emoji: "📍", label: "Prime Location" },
+    { emoji: "🏊", label: "Nice Amenities" },
+  ],
   Restaurants: [
     { emoji: "🍽️", label: "Delicious Food" },
     { emoji: "🌟", label: "Great Ambiance" },

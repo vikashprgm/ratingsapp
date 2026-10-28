@@ -4,11 +4,12 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Success } from "./success"
 import { getReview, getTags } from "@/app/getReview"
 import { Heart, Smile, PenLine, Copy, Zap, ArrowRight, Check } from "lucide-react"
+import type { Tag } from "@/app/getReview"
 
 interface store_data {
   name: string
   url: string
-  cat: string
+  cats: string[]
 }
 
 interface displayprops {
@@ -33,18 +34,38 @@ export function Review({ item }: displayprops) {
   const [isTyping, setIsTyping] = useState(false)
   const [isCopied, setIsCopied] = useState(false)
 
-  const highlights = useMemo(() => getTags(item.cat), [item.cat])
-  // 4-5 stars -> send to Google Maps, regardless of category
-  const isPositive = heart > 3
-  // AI-generated review + chips only when we have a category to generate from
-  const hasReview = isPositive && !!item.cat
+  // Extract a maximum of 10 tags, fairly distributed across all selected categories
+  const highlights = useMemo(() => {
+    if (!item.cats || item.cats.length === 0) return []
+    
+    // Get array of tags for each selected category
+    const tagsPerCategory = item.cats.map((cat) => getTags(cat) || [])
+    const mixedTags: Tag[] = []
+    const MAX_TAGS = 10
+    
+    let tagIndex = 0
+    // Round-robin selection: pick 1 tag per category until we hit 10 total
+    while (mixedTags.length < MAX_TAGS && tagIndex < 6) { // 6 is max tags per category
+      for (const tags of tagsPerCategory) {
+        if (mixedTags.length >= MAX_TAGS) break
+        
+        const currentTag = tags[tagIndex]
+        if (currentTag && !mixedTags.some(t => t.label === currentTag.label)) {
+          mixedTags.push(currentTag)
+        }
+      }
+      tagIndex++
+    }
+    return mixedTags
+  }, [item.cats])
 
-  // Reset chosen chips if the category changes
+  const isPositive = heart > 3
+  const hasReview = isPositive && item.cats && item.cats.length > 0
+
   useEffect(() => {
     setSelected([])
-  }, [item.cat])
+  }, [item.cats])
 
-  // Generate + type out the review when the rating becomes positive
   useEffect(() => {
     if (!hasReview) {
       setDisplayedReview("")
@@ -53,7 +74,11 @@ export function Review({ item }: displayprops) {
       return
     }
 
-    const reviewText = (getReview(item.cat) as string) || ""
+    // This line naturally combines reviews from multiple categories
+    const reviewText = item.cats 
+      ? item.cats.map((category) => getReview(category)).filter(Boolean).join(" ") 
+      : ""
+
     setFullReview(reviewText)
     setDisplayedReview("")
     setIsTyping(true)
@@ -69,7 +94,7 @@ export function Review({ item }: displayprops) {
     }, 30)
 
     return () => clearInterval(interval)
-  }, [hasReview, heart, item.cat])
+  }, [hasReview, heart, item.cats])
 
   // Final text = generated review + a sentence built from the selected chips
   const finalText = useMemo(() => {
@@ -103,7 +128,10 @@ export function Review({ item }: displayprops) {
       setShowSuc(true)
       return
     }
-    window.location.href = item.url
+    
+    // Ensure the URL is absolute before redirecting
+    const targetUrl = item.url.startsWith('http') ? item.url : `https://${item.url}`
+    window.location.href = targetUrl
   }
 
   return (
