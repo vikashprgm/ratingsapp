@@ -13,30 +13,30 @@ export const categoryReviews: Record<string, string[]> = {
   ],
   Restaurants: [
     "Amazing ambiance and the food tasted exceptionally fresh!",
-    "Service was a bit slow during peak hours, but the main course made up for it.",
+    "Service was incredibly fast and the main course was absolutely delicious!",
     "Great place for family dinners. Highly recommend the chef's special.",
-    "Decent food, though a bit overpriced for the portion sizes.",
+    "Generous portion sizes and completely worth every penny!",
     "Absolute perfection from start to finish! Will definitely be coming back soon."
   ],
   Cafes: [
     "The cold brew here is top-notch, perfect spot to get some work done.",
     "Cozy little corner with wonderful lighting and friendly staff.",
-    "Pastries were a bit dry, but the cappuccino was smooth and rich.",
+    "The pastries were incredibly fresh and the cappuccino was smooth and rich.",
     "Love the indie playlist they play in the background. Very relaxing vibe.",
-    "A bit crowded on weekends, but totally worth the wait for their artisanal coffee."
+    "A fantastic vibrant atmosphere, totally worth visiting for their artisanal coffee."
   ],
   Bakery: [
     "The garlic bread and freshly baked croissants melt in your mouth!",
     "Ordered a custom birthday cake and it looked and tasted incredible.",
     "Everything smelled so good as soon as I walked through the door.",
-    "The quality of ingredients clearly justifies the price. Definately recommend visiting",
+    "Premium quality ingredients that make every bite an absolute delight.",
     "Their chocolate truffle pastry is hands down the best in town."
   ],
   "Sweet Shops": [
     "Authentic traditional taste! The rasgullas were super fresh and juicy.",
     "Clean hygienic setup and the packaging for festival gifting was neat.",
     "Jalebis were served piping hot and wonderfully crisp.",
-    "A bit too sweet for my liking, but traditional dessert lovers will adore it.",
+    "Perfectly balanced sweetness, traditional dessert lovers will absolutely adore it.",
     "The variety of mithai available here is impressive. Quality is consistent."
   ],
   "Street Food": [
@@ -49,7 +49,7 @@ export const categoryReviews: Record<string, string[]> = {
   "Cloth Stores": [
     "The fabric quality is amazing and fits true to size.",
     "Trendy collection with reasonable pricing. Staff helped me style a full outfit.",
-    "Colors bled slightly after the first wash, but otherwise decent quality.",
+    "The colors are vibrant and the fabric retains its premium feel even after washing.",
     "Great variety of ethnic wear for festive occasions.",
     "Smooth checkout experience and helpful customer service."
   ],
@@ -72,7 +72,7 @@ export const categoryReviews: Record<string, string[]> = {
     "You can see the fine craftsmanship and attention to detail in every piece.",
     "Unique collection that you won't find in standard retail stores.",
     "Fragile items were packed very securely for travel.",
-    "Slightly on the higher side, but you are paying for authentic handmade craft."
+    "Truly authentic handmade crafts that are absolutely worth the investment."
   ],
   Bookstores: [
     "Quiet, peaceful atmosphere with a fantastic collection of indie titles.",
@@ -85,15 +85,22 @@ export const categoryReviews: Record<string, string[]> = {
     "The deep tissue massage completely melted away my stress. Highly professional!",
     "Clean equipment, relaxing music, and polite staff.",
     "Got a haircut exactly like the reference photo I showed.",
-    "A bit hard to secure an appointment on weekends, so book in advance.",
+    "Booking was seamless and the staff accommodated my schedule perfectly.",
     "Luxurious experience without breaking the bank."
   ],
   Gyms: [
     "State-of-the-art equipment and the trainers are very motivating.",
     "Clean locker rooms and spacious workout floor layout.",
-    "Gets a bit packed during the 6 PM peak slot, but great overall energy.",
+    "Great overall energy on the floor and plenty of equipment available for everyone.",
     "Customized workout guidance has already helped me see results.",
     "Affordable membership plans with zero hidden fees."
+  ],
+  "Jewelry Shop": [
+    "Stunning collection with exquisite craftsmanship and brilliant designs.",
+    "The staff was incredibly patient and helped me find the perfect gift.",
+    "Absolutely transparent pricing and providing genuine hallmark certification.",
+    "Beautiful store ambiance with a fantastic variety of both traditional and modern pieces.",
+    "Got my ring resized here; the service was exceptionally quick and professional."
   ],
   Other: [
     "Clean establishment and cooperative staff.",
@@ -208,6 +215,14 @@ export const categoryTags: Record<string, Tag[]> = {
     { emoji: "📋", label: "Custom Workouts" },
     { emoji: "🔥", label: "Great Energy" },
     { emoji: "💸", label: "Affordable Plans" },
+  ],
+  "Jewelry Shop": [
+    { emoji: "💎", label: "Exquisite Designs" },
+    { emoji: "✨", label: "Brilliant Craftsmanship" },
+    { emoji: "🤝", label: "Patient Staff" },
+    { emoji: "✅", label: "Hallmark Certified" },
+    { emoji: "💍", label: "Perfect Gifting" },
+    { emoji: "💰", label: "Transparent Pricing" },
   ],
   Other: [
     { emoji: "😊", label: "Friendly Staff" },

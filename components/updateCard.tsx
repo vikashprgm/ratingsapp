@@ -17,6 +17,7 @@ const categories = [
   "Restaurants",
   "Cafes",
   "Bakery",
+  "Hotels",
   "Sweet Shops",
   "Street Food",
   "Cloth Stores",
@@ -28,6 +29,7 @@ const categories = [
   "Gyms",
   "Other"
 ]
+
 export function UpdateCard({
   onSubmit, setName, setLink, setPasskey, setId, isAI, setIsAI, setCategory, category
 }: {
