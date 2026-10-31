@@ -28,6 +28,7 @@ const categories = [
   "Bookstores",
   "Salons & Spas",
   "Gyms",
+  "Eye Doctor & Eyewear",
   "Other"
 ]
 

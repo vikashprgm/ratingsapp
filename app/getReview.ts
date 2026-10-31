@@ -102,6 +102,13 @@ export const categoryReviews: Record<string, string[]> = {
     "Beautiful store ambiance with a fantastic variety of both traditional and modern pieces.",
     "Got my ring resized here; the service was exceptionally quick and professional."
   ],
+  "Eye Doctor & Eyewear": [
+    "The doctor was extremely thorough with the eye examination and explained everything clearly.",
+    "State-of-the-art equipment and the staff helped me pick out the most stylish frames.",
+    "Got my prescription glasses made here; the vision clarity and lens quality are top-notch.",
+    "Very polite team, zero wait time, and a fantastic range of designer eyewear.",
+    "Smooth eye checkup experience, accurate prescription, and wonderful customer service."
+  ],
   Other: [
     "Clean establishment and cooperative staff.",
     "Quick service and smooth overall experience.",
@@ -223,6 +230,14 @@ export const categoryTags: Record<string, Tag[]> = {
     { emoji: "✅", label: "Hallmark Certified" },
     { emoji: "💍", label: "Perfect Gifting" },
     { emoji: "💰", label: "Transparent Pricing" },
+  ],
+  "Eye Doctor & Eyewear": [
+    { emoji: "🩺", label: "Thorough Exam" },
+    { emoji: "👓", label: "Stylish Frames" },
+    { emoji: "✨", label: "Crystal Clear Vision" },
+    { emoji: "⚡", label: "Quick Service" },
+    { emoji: "👩‍⚕️", label: "Expert Doctor" },
+    { emoji: "💎", label: "Quality Lenses" },
   ],
   Other: [
     { emoji: "😊", label: "Friendly Staff" },
