@@ -9,112 +9,208 @@ export const categoryReviews: Record<string, string[]> = {
     "Great location and the complimentary breakfast was a delightful bonus.",
     "The staff was incredibly accommodating and made check-in a breeze.",
     "Comfortable beds and excellent room service. Highly recommended.",
-    "Fantastic amenities and the pool area was incredibly relaxing."
+    "Fantastic amenities and the pool area was incredibly relaxing.",
+    "Breathtaking view from the balcony and top-tier hospitality throughout.",
+    "The concierge was exceptionally helpful with local sightseeing recommendations.",
+    "Spotless bathrooms, cozy linens, and whisper-quiet rooms for sound sleep.",
+    "Felt like a luxury getaway from the moment we stepped into the lobby.",
+    "Quick room service and every single request was handled with a smile.",
+    "Superb property maintenance with an atmosphere of absolute relaxation."
   ],
   Restaurants: [
     "Amazing ambiance and the food tasted exceptionally fresh!",
     "Service was incredibly fast and the main course was absolutely delicious!",
     "Great place for family dinners. Highly recommend the chef's special.",
     "Generous portion sizes and completely worth every penny!",
-    "Absolute perfection from start to finish! Will definitely be coming back soon."
+    "Absolute perfection from start to finish! Will definitely be coming back soon.",
+    "The flavors were authentic and balanced to absolute culinary perfection.",
+    "Warm, attentive staff and gorgeous plating that made the meal feel special.",
+    "Every dish ordered arrived hot, aromatic, and cooked to absolute perfection.",
+    "Incredible dining experience with great background music and tasteful decor.",
+    "The appetizers alone are worth the visit; easily one of the best spots in town.",
+    "Wonderful hospitality and dessert was the ideal sweet finish to our dinner."
   ],
   Cafes: [
     "The cold brew here is top-notch, perfect spot to get some work done.",
     "Cozy little corner with wonderful lighting and friendly staff.",
     "The pastries were incredibly fresh and the cappuccino was smooth and rich.",
     "Love the indie playlist they play in the background. Very relaxing vibe.",
-    "A fantastic vibrant atmosphere, totally worth visiting for their artisanal coffee."
+    "A fantastic vibrant atmosphere, totally worth visiting for their artisanal coffee.",
+    "Fast Wi-Fi, plenty of power outlets, and outstanding pour-over coffee.",
+    "Their signature espresso roast has a rich crema and incredible finish.",
+    "The toasted sandwiches and beverage pairings make for the perfect brunch.",
+    "Delightful baristas who truly understand bean origins and brewing craft.",
+    "An aesthetic hideaway that provides peaceful comfort during busy weekdays.",
+    "Warm, inviting interior design with plenty of natural sunlight to relax."
   ],
   Bakery: [
     "The garlic bread and freshly baked croissants melt in your mouth!",
     "Ordered a custom birthday cake and it looked and tasted incredible.",
     "Everything smelled so good as soon as I walked through the door.",
     "Premium quality ingredients that make every bite an absolute delight.",
-    "Their chocolate truffle pastry is hands down the best in town."
+    "Their chocolate truffle pastry is hands down the best in town.",
+    "Crisp sourdough crust with an airy, soft crumb that toasts to perfection.",
+    "The artisanal tea cookies and fruit tarts are consistently delicious.",
+    "Staff packed our baked goods with extreme care so everything stayed pristine.",
+    "Best red velvet slice I have tasted; rich cream cheese and tender sponge.",
+    "Always fresh batches coming straight out of the oven throughout the morning.",
+    "Delightful variety of both sweet treats and savory stuffed rolls."
   ],
   "Sweet Shops": [
     "Authentic traditional taste! The rasgullas were super fresh and juicy.",
     "Clean hygienic setup and the packaging for festival gifting was neat.",
     "Jalebis were served piping hot and wonderfully crisp.",
     "Perfectly balanced sweetness, traditional dessert lovers will absolutely adore it.",
-    "The variety of mithai available here is impressive. Quality is consistent."
+    "The variety of mithai available here is impressive. Quality is consistent.",
+    "Pure desi ghee preparations that evoke genuine homemade festival memories.",
+    "The dry fruit laddoos and kaju katli were extraordinarily soft and rich.",
+    "Immaculate display counters, courteous team, and quick box packaging.",
+    "Fresh batches prepared daily without artificial colors or preservative aftertaste.",
+    "Reliable spot for all special family celebrations and seasonal gift hampers.",
+    "Flavors hit all the right nostalgic notes with impeccable ingredient purity."
   ],
   "Street Food": [
     "Packed with flavor! The golgappas are spicy and refreshing.",
     "Very hygienic preparation compared to regular roadside stalls.",
     "Quick service and authentic local taste that hits the spot.",
     "Portions are generous and the pricing is very pocket-friendly.",
-    "A must-visit if you love chats and spicy street snacks."
+    "A must-visit if you love chats and spicy street snacks.",
+    "Crispy papdis and tangy tamarind chutney combined to perfection.",
+    "Hot, steaming snacks fried fresh on order right before your eyes.",
+    "Consistent spicy punch that always satisfies evening comfort food cravings.",
+    "The pav bhaji had an irresistible butter aroma and balanced spices.",
+    "Clean mineral water used for preparations, ensuring complete peace of mind.",
+    "A legendary spot that delivers explosive flavor in every single bite."
   ],
   "Cloth Stores": [
     "The fabric quality is amazing and fits true to size.",
     "Trendy collection with reasonable pricing. Staff helped me style a full outfit.",
     "The colors are vibrant and the fabric retains its premium feel even after washing.",
     "Great variety of ethnic wear for festive occasions.",
-    "Smooth checkout experience and helpful customer service."
+    "Smooth checkout experience and helpful customer service.",
+    "Well-organized fitting rooms and organized racks make shopping effortless.",
+    "Spotted unique designer patterns not available in typical mall outlets.",
+    "Staff showed genuine patience while fetching different sizes and colorways.",
+    "The tailoring and alterations were completed promptly with exact measurements.",
+    "High-end contemporary cuts blended with comfortable, breathable fabrics.",
+    "Exceptional value during festive collections with attractive bundle pricing."
   ],
   Grocery: [
     "All vegetables and fruits were fresh and organically sorted.",
     "Got everything on my monthly grocery checklist under one roof.",
     "Home delivery was prompt and items were securely packed.",
     "Fair pricing with regular discounts on household essentials.",
-    "Very clean store layout, making it easy to find items quickly."
+    "Very clean store layout, making it easy to find items quickly.",
+    "Shelves are always stocked up with both daily staples and gourmet imports.",
+    "Polite billing staff, minimal billing queues, and seamless digital payments.",
+    "Perishables and dairy are kept in optimal refrigeration conditions.",
+    "Wide selection of healthy organic grains, cold-pressed oils, and spices.",
+    "Carts and aisles are wide, making shopping comfortable and stress-free.",
+    "Reliable neighborhood store that delivers total convenience every visit."
   ],
   Electronics: [
     "Genuine products with proper manufacturer warranty cards.",
     "The staff has deep technical knowledge and helped me pick the right laptop.",
     "Quick billing and assistance with initial device setup.",
     "Competitive pricing compared to online stores.",
-    "Great customer support when I needed help with an exchange."
+    "Great customer support when I needed help with an exchange.",
+    "Wide array of authentic accessories, screen protectors, and fast chargers.",
+    "Transparent demonstrations comparing specs before finalizing my purchase.",
+    "Effortless purchase experience with flexible payment and financing plans.",
+    "Technicians assisted with unboxing and data transfer with zero hassle.",
+    "Always the first to receive latest tech releases and official accessories.",
+    "Trustworthy retail destination with certified genuine electronics stock."
   ],
   Handicrafts: [
     "Exquisite pieces of local art. Perfect for home decor or gifting.",
     "You can see the fine craftsmanship and attention to detail in every piece.",
     "Unique collection that you won't find in standard retail stores.",
     "Fragile items were packed very securely for travel.",
-    "Truly authentic handmade crafts that are absolutely worth the investment."
+    "Truly authentic handmade crafts that are absolutely worth the investment.",
+    "Directly supports local artisans while bringing cultural beauty home.",
+    "The hand-carved woodwork and brass accents show remarkable skill.",
+    "The shopkeeper gave us the historical context behind each handcrafted piece.",
+    "Aesthetic pottery and handwoven tapestries that add life to any room.",
+    "Carefully wrapped in bubble layers and safe cardboard packaging for transit.",
+    "A goldmine for collectors seeking rare, genuine handcrafted pieces."
   ],
   Bookstores: [
     "Quiet, peaceful atmosphere with a fantastic collection of indie titles.",
     "The staff gave me great recommendations based on my favorite genres.",
     "Loved the cozy reading nook tucked away in the corner.",
     "Reasonable prices and they even special-ordered a book for me.",
-    "A heaven for book lovers. I could spend hours browsing here."
+    "A heaven for book lovers. I could spend hours browsing here.",
+    "Extensive section for classic literature, philosophy, and modern thrillers.",
+    "Curated staff picks helped me discover remarkable upcoming authors.",
+    "Organized systematically so finding obscure titles was a total breeze.",
+    "Delightful selection of bookmarks, stationery, and literary journals.",
+    "Quiet ambient atmosphere that lets you unwind and read in peace.",
+    "A true sanctuary for book enthusiasts who love physical paperbacks."
   ],
   "Salons & Spas": [
     "The deep tissue massage completely melted away my stress. Highly professional!",
     "Clean equipment, relaxing music, and polite staff.",
     "Got a haircut exactly like the reference photo I showed.",
     "Booking was seamless and the staff accommodated my schedule perfectly.",
-    "Luxurious experience without breaking the bank."
+    "Luxurious experience without breaking the bank.",
+    "High-grade grooming and hair treatments that showed immediate results.",
+    "Therapists paid close attention to target tension areas with skill.",
+    "Sterilized instruments, fresh disposable sheets, and calming aromas.",
+    "Stylists offer insightful advice on haircare and maintenance routines.",
+    "A refreshing retreat that leaves you rejuvenated and polished.",
+    "Punctual appointments with soothing herbal teas served on arrival."
   ],
   Gyms: [
     "State-of-the-art equipment and the trainers are very motivating.",
     "Clean locker rooms and spacious workout floor layout.",
     "Great overall energy on the floor and plenty of equipment available for everyone.",
     "Customized workout guidance has already helped me see results.",
-    "Affordable membership plans with zero hidden fees."
+    "Affordable membership plans with zero hidden fees.",
+    "Dumbbells are racked neatly and hygiene is maintained rigorously.",
+    "Diverse cardio options, heavy power racks, and dedicated stretch zones.",
+    "Trainers prioritize injury prevention and proper lift biomechanics.",
+    "Positive, goal-oriented workout atmosphere that keeps motivation high.",
+    "Air conditioning and ventilation keep the gym floor fresh during peak sets.",
+    "Excellent training ground for both powerlifters and casual lifters."
   ],
   "Jewelry Shop": [
     "Stunning collection with exquisite craftsmanship and brilliant designs.",
     "The staff was incredibly patient and helped me find the perfect gift.",
     "Absolutely transparent pricing and providing genuine hallmark certification.",
     "Beautiful store ambiance with a fantastic variety of both traditional and modern pieces.",
-    "Got my ring resized here; the service was exceptionally quick and professional."
+    "Got my ring resized here; the service was exceptionally quick and professional.",
+    "The diamond clarity and cut quality exceeded all expectations.",
+    "Intricate temple jewelry patterns that showcase master goldsmithing.",
+    "Clear digital billing detailing gold rates, making charges, and stone weights.",
+    "Secure, private consulting cabins for trying on bridal collections.",
+    "Wide selection of lightweight everyday gold and platinum chains.",
+    "Warm hospitality with personalized attention to detail for our wedding purchase."
   ],
   "Eye Doctor & Eyewear": [
     "The doctor was extremely thorough with the eye examination and explained everything clearly.",
     "State-of-the-art equipment and the staff helped me pick out the most stylish frames.",
     "Got my prescription glasses made here; the vision clarity and lens quality are top-notch.",
     "Very polite team, zero wait time, and a fantastic range of designer eyewear.",
-    "Smooth eye checkup experience, accurate prescription, and wonderful customer service."
+    "Smooth eye checkup experience, accurate prescription, and wonderful customer service.",
+    "Anti-glare blue cut lenses have drastically reduced my screen fatigue.",
+    "Dr. took extra time to check corneal health and answered all questions calmly.",
+    "Wide selection of ultra-lightweight titanium and flexible frame designs.",
+    "Fast turnaround time; my custom prescription glasses were ready in a day.",
+    "Comfortable automated vision testing and precise pupillary distance alignment.",
+    "Honest consultation without pushing unnecessary tests or expensive add-ons."
   ],
   Other: [
     "Clean establishment and cooperative staff.",
     "Quick service and smooth overall experience.",
     "Good value for money and reliable service.",
     "Exceeded my expectations in terms of quality.",
-    "Will definitely recommend to friends and family."
+    "Will definitely recommend to friends and family.",
+    "Punctual response, polite behavior, and attention to customer needs.",
+    "Professional setup that operates with total transparency.",
+    "Reliable experience and smooth execution from start to end.",
+    "Great communication and pleasant customer service throughout.",
+    "Very satisfied with the speed and attention to detail provided.",
+    "Consistent and trustworthy service that inspires confidence."
   ]
 };
 
@@ -126,6 +222,8 @@ export const categoryTags: Record<string, Tag[]> = {
     { emoji: "🍳", label: "Good Breakfast" },
     { emoji: "📍", label: "Prime Location" },
     { emoji: "🏊", label: "Nice Amenities" },
+    { emoji: "🌅", label: "Balcony View" },
+    { emoji: "☕", label: "Complimentary Tea" },
   ],
   Restaurants: [
     { emoji: "🍽️", label: "Delicious Food" },
@@ -134,6 +232,8 @@ export const categoryTags: Record<string, Tag[]> = {
     { emoji: "👨‍🍳", label: "Chef's Special" },
     { emoji: "👨‍👩‍👧", label: "Family Friendly" },
     { emoji: "💸", label: "Value for Money" },
+    { emoji: "🥗", label: "Fresh Ingredients" },
+    { emoji: "🍰", label: "Yummy Desserts" },
   ],
   Cafes: [
     { emoji: "☕", label: "Amazing Coffee" },
@@ -142,6 +242,8 @@ export const categoryTags: Record<string, Tag[]> = {
     { emoji: "💻", label: "Work-Friendly" },
     { emoji: "🛋️", label: "Cozy Corner" },
     { emoji: "😊", label: "Friendly Staff" },
+    { emoji: "📶", label: "Fast Wi-Fi" },
+    { emoji: "🥪", label: "Tasty Snacks" },
   ],
   Bakery: [
     { emoji: "🥐", label: "Fresh Baked" },
@@ -150,6 +252,8 @@ export const categoryTags: Record<string, Tag[]> = {
     { emoji: "🥖", label: "Garlic Bread" },
     { emoji: "✨", label: "Quality Ingredients" },
     { emoji: "😋", label: "Heavenly Aroma" },
+    { emoji: "🍪", label: "Crisp Cookies" },
+    { emoji: "🥯", label: "Artisan Breads" },
   ],
   "Sweet Shops": [
     { emoji: "🍬", label: "Authentic Taste" },
@@ -158,6 +262,8 @@ export const categoryTags: Record<string, Tag[]> = {
     { emoji: "🎁", label: "Festive Gifting" },
     { emoji: "🍯", label: "Wide Mithai Variety" },
     { emoji: "✅", label: "Consistent Quality" },
+    { emoji: "🥛", label: "Pure Desi Ghee" },
+    { emoji: "🍮", label: "Soft Rasgullas" },
   ],
   "Street Food": [
     { emoji: "🌶️", label: "Bursting Flavor" },
@@ -166,6 +272,8 @@ export const categoryTags: Record<string, Tag[]> = {
     { emoji: "🥘", label: "Generous Portions" },
     { emoji: "💰", label: "Pocket-Friendly" },
     { emoji: "📍", label: "Local Favorite" },
+    { emoji: "🥙", label: "Crisp Chats" },
+    { emoji: "🥤", label: "Mineral Water Used" },
   ],
   "Cloth Stores": [
     { emoji: "🧵", label: "Fabric Quality" },
@@ -174,6 +282,8 @@ export const categoryTags: Record<string, Tag[]> = {
     { emoji: "🪔", label: "Festive Wear" },
     { emoji: "💁", label: "Helpful Styling" },
     { emoji: "💸", label: "Fair Pricing" },
+    { emoji: "🪞", label: "Spacious Trial Rooms" },
+    { emoji: "✂️", label: "Quick Alterations" },
   ],
   Grocery: [
     { emoji: "🥬", label: "Fresh Produce" },
@@ -182,6 +292,8 @@ export const categoryTags: Record<string, Tag[]> = {
     { emoji: "🏷️", label: "Great Discounts" },
     { emoji: "🧺", label: "Clean Layout" },
     { emoji: "📦", label: "Secure Packing" },
+    { emoji: "🌾", label: "Organic Selection" },
+    { emoji: "💳", label: "Easy Checkout" },
   ],
   Electronics: [
     { emoji: "✅", label: "Genuine Products" },
@@ -190,6 +302,8 @@ export const categoryTags: Record<string, Tag[]> = {
     { emoji: "🛠️", label: "Setup Help" },
     { emoji: "🤝", label: "Great Support" },
     { emoji: "🧾", label: "Quick Billing" },
+    { emoji: "📱", label: "Latest Models" },
+    { emoji: "🔌", label: "Original Accessories" },
   ],
   Handicrafts: [
     { emoji: "🎨", label: "Exquisite Art" },
@@ -198,6 +312,8 @@ export const categoryTags: Record<string, Tag[]> = {
     { emoji: "🏺", label: "Unique Pieces" },
     { emoji: "📦", label: "Secure Packing" },
     { emoji: "🏡", label: "Home Decor" },
+    { emoji: "🪵", label: "Solid Woodwork" },
+    { emoji: "🧵", label: "Authentic Weaves" },
   ],
   Bookstores: [
     { emoji: "📚", label: "Great Collection" },
@@ -206,6 +322,8 @@ export const categoryTags: Record<string, Tag[]> = {
     { emoji: "🪑", label: "Cozy Reading Nook" },
     { emoji: "📖", label: "Indie Titles" },
     { emoji: "💸", label: "Fair Prices" },
+    { emoji: "🔖", label: "Cute Bookmarks" },
+    { emoji: "☕", label: "Quiet Space" },
   ],
   "Salons & Spas": [
     { emoji: "💆", label: "Relaxing Massage" },
@@ -214,6 +332,8 @@ export const categoryTags: Record<string, Tag[]> = {
     { emoji: "🎶", label: "Calming Music" },
     { emoji: "👏", label: "Professional Team" },
     { emoji: "💸", label: "Great Value" },
+    { emoji: "🧴", label: "Premium Products" },
+    { emoji: "⏰", label: "Punctual Service" },
   ],
   Gyms: [
     { emoji: "🏋️", label: "Top Equipment" },
@@ -222,6 +342,8 @@ export const categoryTags: Record<string, Tag[]> = {
     { emoji: "📋", label: "Custom Workouts" },
     { emoji: "🔥", label: "Great Energy" },
     { emoji: "💸", label: "Affordable Plans" },
+    { emoji: "❄️", label: "Well Ventilated" },
+    { emoji: "🏃", label: "Cardio Zone" },
   ],
   "Jewelry Shop": [
     { emoji: "💎", label: "Exquisite Designs" },
@@ -230,6 +352,8 @@ export const categoryTags: Record<string, Tag[]> = {
     { emoji: "✅", label: "Hallmark Certified" },
     { emoji: "💍", label: "Perfect Gifting" },
     { emoji: "💰", label: "Transparent Pricing" },
+    { emoji: "👑", label: "Bridal Collection" },
+    { emoji: "🔒", label: "Secure Ambiance" },
   ],
   "Eye Doctor & Eyewear": [
     { emoji: "🩺", label: "Thorough Exam" },
@@ -238,6 +362,8 @@ export const categoryTags: Record<string, Tag[]> = {
     { emoji: "⚡", label: "Quick Service" },
     { emoji: "👩‍⚕️", label: "Expert Doctor" },
     { emoji: "💎", label: "Quality Lenses" },
+    { emoji: "💻", label: "Blue-Cut Lenses" },
+    { emoji: "🪶", label: "Lightweight Frames" },
   ],
   Other: [
     { emoji: "😊", label: "Friendly Staff" },
@@ -246,6 +372,8 @@ export const categoryTags: Record<string, Tag[]> = {
     { emoji: "💸", label: "Value for Money" },
     { emoji: "✅", label: "Reliable" },
     { emoji: "🌟", label: "Exceeded Expectations" },
+    { emoji: "🤝", label: "Polite Behavior" },
+    { emoji: "💯", label: "Highly Recommended" },
   ],
 };
 
