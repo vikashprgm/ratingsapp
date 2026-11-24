@@ -29,6 +29,7 @@ const categories = [
   "Salons & Spas",
   "Gyms",
   "Eye Doctor & Eyewear",
+  "Tattoo Shop",
   "Other"
 ]
 
