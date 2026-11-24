@@ -199,6 +199,19 @@ export const categoryReviews: Record<string, string[]> = {
     "Comfortable automated vision testing and precise pupillary distance alignment.",
     "Honest consultation without pushing unnecessary tests or expensive add-ons."
   ],
+  "Tattoo Shop": [
+    "Incredible linework and shading! The artist brought my exact vision to life.",
+    "Super hygienic studio with brand-new, sealed needles opened right in front of me.",
+    "The artist was patient, took time perfecting the stencil, and made the whole session comfortable.",
+    "Amazing custom design work—way better than the reference photo I brought in.",
+    "Clean, welcoming vibe with great music that helped calm my first-tattoo nerves.",
+    "Healed beautifully with crisp lines and rich ink saturation. Couldn't be happier!",
+    "Very professional team who walked me through every step of the aftercare process.",
+    "Gentle hand and great attention to detail; the session was way smoother than expected.",
+    "Top-notch artistry and fair pricing for the level of precision they deliver.",
+    "Got a cover-up done here and you genuinely cannot tell there was ever anything underneath.",
+    "Easily the best tattoo studio in town—already planning my next piece with them!"
+  ],
   Other: [
     "Clean establishment and cooperative staff.",
     "Quick service and smooth overall experience.",
@@ -364,6 +377,16 @@ export const categoryTags: Record<string, Tag[]> = {
     { emoji: "💎", label: "Quality Lenses" },
     { emoji: "💻", label: "Blue-Cut Lenses" },
     { emoji: "🪶", label: "Lightweight Frames" },
+  ],
+  "Tattoo Shop": [
+    { emoji: "🎨", label: "Crisp Linework" },
+    { emoji: "🧼", label: "Super Hygienic" },
+    { emoji: "✨", label: "Custom Designs" },
+    { emoji: "🙌", label: "Gentle Hand" },
+    { emoji: "🩹", label: "Great Aftercare" },
+    { emoji: "🎶", label: "Chill Studio Vibe" },
+    { emoji: "💉", label: "Sterile Equipment" },
+    { emoji: "🔥", label: "Talented Artists" },
   ],
   Other: [
     { emoji: "😊", label: "Friendly Staff" },
